@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import { v4 } from 'uuid';
-import { cardImages } from './data/gameData';
+import { cardImages2 } from './data/gameData';
 import Card from './components/Card/Card';
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
 
   // shuffle cards for a new game
   const shuffleCards = () => {
-    const shuffledCards = [...cardImages, ...cardImages]
+    const shuffledCards = [...cardImages2, ...cardImages2]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: v4() }));
     setCards(shuffledCards);
@@ -55,7 +55,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Magic Match</h1>
+      <h1>Double Doggo 🐶</h1>
       <button onClick={shuffleCards}>New Game</button>
       <p>Turns: {turns}</p>
       <div className="card-grid">
